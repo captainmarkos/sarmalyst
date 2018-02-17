@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="../../styles.css" />
-<title>{{restaurant_name}}</title>
+<title>{{name}}</title>
 
 <!-- sarmalyst.com : Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114357514-1"></script>
@@ -20,15 +20,15 @@
 
 <div class="breadcrumbs">
     <a href="../../index.html">Home</a> |
-    <a href="../singles_index.html">All Restaurants</a> | {{restaurant_name}}
+    <a href="../singles_index.html">All Restaurants</a> | {{name}}
 </div>
 <hr />
 
 <div class="data-container">
-    <h2><a target="_blank" href="{{& restaurant_link_google}}">{{restaurant_name}}</a></h2>
-    <span>{{address_address}}</span>
+    <h2><a target="_blank" href="{{& google_search_link}}">{{name}}</a></h2>
+    <span>{{address}}</span>
     <br />
-    <span>{{address_city}}, {{address_state}} {{address_zip}}</span>
+    <span>{{city}}, {{state}} {{zip}}</span>
     <br />
     <br />
     <span><b>Inspection Score:</b> {{score}}</span>
