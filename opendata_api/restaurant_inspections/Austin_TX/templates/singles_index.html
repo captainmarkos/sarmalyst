@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="../styles.css" />
+<title>Restaurant Directory</title>
+
+<!-- sarmalyst.com : Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114357514-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'UA-114357514-1');
+</script>
+
+</head>
+<body>
+
+<div class="breadcrumbs">
+    <a href="../index.html">Home</a> | All Restaurants
+</div>
+<hr />
+
+<div class="data-container">
+  <h2 style="text-align: center;">
+      Restaurants in Austin TX
+      <br />
+      Inspection Scores
+  </h2>
+</div>
+<hr />
+
+{{#restaurants}}
+<ul class="">
+    <li><a href="{{& single_file_name}}">{{restaurant_name}}</a></li>
+</ul>
+{{/restaurants}}
+
+</body>
+</html>
+
