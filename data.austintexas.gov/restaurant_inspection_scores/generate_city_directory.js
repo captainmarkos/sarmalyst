@@ -21,7 +21,7 @@ var files_written = 0;
 
     db.connect(dbutils.status);
 
-    var sql = 'SELECT * FROM restaurant_inspection_scores GROUP BY facility_id ORDER BY name';
+    var sql = 'SELECT * FROM restaurant_inspection_scores_austin_tx GROUP BY facility_id ORDER BY name';
     db.query(sql, function(err, data) {
         var list = utils.gather_cities(data);
 
