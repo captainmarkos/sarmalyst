@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="../../../../styles/sarmalyst.css" />
+<script defer src="../../../../styles/fontawesome-free-5.0.6/svg-with-js/js/fontawesome-all.min.js"></script>
+<title>{{program_identifier}}</title>
+
+<!-- sarmalyst.com : Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114357514-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'UA-114357514-1');
+</script>
+
+<!-- Google Adsense -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4870752590237490",
+    enable_page_level_ads: true
+  });
+</script>
+
+</head>
+<body>
+
+<div class="breadcrumbs">
+    <a href="../../index.html">Home</a> |
+    <a href="../singles_index.html">All Restaurants</a> | {{program_identifier}}
+</div>
+<hr />
+
+<div class="data-container">
+    <h2><a target="_blank" href="{{& google_search_link}}">{{program_identifier}}</a></h2>
+    <div>{{site_address}}</div>
+    <div>{{city}}, {{state}} {{zip}}</div>
+    <div class="map-marker"><a href="{{map_url}}" target="_blank">Map <i class="fa fa-map-marker-alt"></i></a></div>
+    <br />
+    <div><b>Inspection Score:</b> {{score}}</div>
+    <div><b>Inspection Date:</b> {{insp_date}}</div>
+    <br />
+    <div><b>Violations</b></div>
+    <div>{{violation1_description}}</div>
+    <div>{{violation1_memo}}</div>
+</div>
+
+</body>
+</html>
+
