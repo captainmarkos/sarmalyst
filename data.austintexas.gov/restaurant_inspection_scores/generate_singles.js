@@ -8,7 +8,7 @@ var db = mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',
     password: '',
-    database: 'bluewild'
+    database: 'sarmalyst'
 });
 
 var TEMPLATE_DIR = './templates/';
@@ -21,7 +21,7 @@ var OUTPUT_DIR = HTML_DIR + 'restaurants/';
 
     db.connect(dbutils.status);
 
-    var sql = 'SELECT * FROM restaurant_inspections GROUP BY facility_id ORDER BY name';
+    var sql = 'SELECT * FROM restaurant_inspection_scores GROUP BY facility_id ORDER BY name';
     db.query(sql, function(err, data) {
         for(var i = 0; i < data.length; i++) {
             data[i].google_search_link = utils.google_search_link(data[i]);

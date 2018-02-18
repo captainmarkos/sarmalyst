@@ -1,4 +1,5 @@
-CREATE TABLE `restaurant_inspections` (
+
+CREATE TABLE `restaurant_inspection_scores` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `name` varchar(256),
   `address` varchar(256),

@@ -15,7 +15,7 @@ var db = mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',
     password: '',
-    database: 'bluewild'
+    database: 'sarmalyst'
 });
 
 var data = JSON.parse(fs.readFileSync('2017.json', 'utf8'));
@@ -32,7 +32,7 @@ for(var i = 0; i < data.length; i++) {
     var inspection_date = data[i].inspection_date.split(/T/)[0];
     var name = data[i].restaurant_name.replace(/\"/g, "'");
 
-    var sql = 'INSERT INTO restaurant_inspections (name, address, city, ' +
+    var sql = 'INSERT INTO restaurant_inspection_scores (name, address, city, ' +
               'state, zip, lat, lng, score, inspection_date, ' +
               'process_description, facility_id) ' +
               'VALUES (' +
@@ -52,7 +52,7 @@ for(var i = 0; i < data.length; i++) {
 }
 
 // sql = 'select * from restaurant_inspections group by facility_id order by name';
-sql = 'select count(*) as total from restaurant_inspections;';
+sql = 'select count(*) as total from restaurant_inspection_scores;';
 db.query(sql, function(err, res) {
   console.log('--> total records: ', res[0].total);
 });
